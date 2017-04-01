@@ -1,0 +1,25 @@
+﻿<div class="row">
+    <div class="text-center">
+        <h2>Add new Delivery</h2>
+
+        <div><label>Title  <input [(ngModel)]="newDelivery.Title" placeholder="title" /></label></div>
+        <div><label>Invoice&nbsp;Id  <input [(ngModel)]="newDelivery.InvoiceId" /></label></div>
+        <div><label>Delivery(days)  <input [(ngModel)]="newDelivery.DeliveryTime" /></label></div>
+        <div>
+            <label>Delivery&nbsp;Date </label>
+            </div>
+        <div>
+            <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+        </div>
+        <div><label>Notes  <input [(ngModel)]="newDelivery.Notes" /></label>                </div>
+        <div><button (click)="addDelivery()">Add Delivery</button></div>
+        <div>
+
+            <p *ngIf="successDelivery">
+                <ngb-alert [type]="alertClass" (close)="closeAlert()">{{actionMessage}}</ngb-alert>
+            </p>
+
+        </div>
+        </div>
+    <a href="/" target="_blank">Googlelink</a>
+</div>

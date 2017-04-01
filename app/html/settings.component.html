@@ -1,0 +1,28 @@
+﻿
+<h2>Set settings</h2>
+<hr />
+settings from raw
+<div>Current Time : {{mydate}}</div>
+<div>Expiry Time : {{tokenExpiryDate}}</div>
+<div>Less time  : {{tokenExpiryLessTime}}</div>
+<div>Token Valid : {{expiryDateCheck}}</div>
+
+<hr />
+settings from token
+<div *ngIf="this.appSettings.isTokenValid()">
+    <div>Current Time : {{mydate}}</div>
+    <div>Raw Expiry string : {{this.appSettings.token['.expires']}}</div>
+    <div>Expiry Time : {{this.appSettings.token.expired_at}}</div>
+    <div>Expiry Time less 5 seconds : {{this.appSettings.token.expired_before_inSeconds}}</div>
+    <div>Token Valid : {{this.appSettings.token.expired_before_inSeconds > mydate}}</div>
+</div>
+<hr />
+
+
+<div><label>Email  <input [(ngModel)]="appSettings.email" placeholder="title" /></label></div>
+<div><label>Password  <input [(ngModel)]="appSettings.password" /></label></div>
+<div><label>Authentication Url  <input [(ngModel)]="appSettings.authUrl" /></label></div>
+<div><button (click)="save()">Save Settings</button></div>
+<div>
+    <p class="success" *ngIf="settings">Saved successfully!</p>
+</div>

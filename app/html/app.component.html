@@ -1,0 +1,37 @@
+﻿<div class="container">
+    <div class="row">
+        <h1>{{title}}</h1>
+    </div>
+</div>
+<nav class="navbar navbar-light bg-faded">
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="isCollapsed = !isCollapsed" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+    </button>
+    <div class="navbar-toggleable-xs" [ngbCollapse]="isCollapsed">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a routerLink="/manage" routerLinkActive="active">Admin panel</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/adddelivery" routerLinkActive="active">New Delivery</a>
+                </li>
+                <li class="nav-item">
+                    <a style="align-items:flex-end" routerLink="/settings" routerLinkActive="active">Settings</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container">
+    <router-outlet></router-outlet>
+</main>
+<footer class="container">
+    <div class="row">
+        <div class="col-xs-12 text-xs-center">
+            &copy; {{copyRight}}
+        </div>
+    </div>
+</footer>
+
+ 
