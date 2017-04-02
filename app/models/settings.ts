@@ -7,7 +7,7 @@ export class Settings {
     email: string = 'agent@shop.com';  
     password: string = 'password';    
     expirytime: Date;
-    authUrl: string = 'http://localhost:65082/Token';
+    authUrl: string = 'http://dev-api.somee.com/api/tkn';
     token: TokenAccess;
 
     setToken(tokenToSet: any): void {
