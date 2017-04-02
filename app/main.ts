@@ -6,5 +6,5 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 
 
 if (!/localhost/.test(document.location.host)) {
-  //enableProdMode();
+  enableProdMode();
 }

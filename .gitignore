@@ -4,6 +4,8 @@ AgentDistribution.ClientTS*
 node_modules/*
 *.suo
 web*.config
+*local*
+*.log
 
 # Windows image file caches
 Thumbs.db
